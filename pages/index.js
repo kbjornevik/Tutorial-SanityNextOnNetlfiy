@@ -1,6 +1,7 @@
 import { sanityClient, urlFor } from "../sanity"
 import Link from "next/link"
 import {groq} from 'next-sanity'
+import getFormattedDate from "../components/util"
 const Home = ({properties  }) => {
     console.log(properties)
     return (
@@ -8,20 +9,22 @@ const Home = ({properties  }) => {
            {properties && (
            <div className="main">
             <div className="feed-container">
-             Hello
+      
                {properties.map((post) => (
-                <Link href={`post/${post.slug.current}`}>
+                <div className="postitem" key={post._id}>
+                 <Link href={`post/${post.slug.current}`}>
                   
-                  <div key={post._id} className="card">
-                    LINK
+                  <div key={'Card:' + post._id } className="card">
+                  
+                   
+                    <img src={urlFor(post.mainImage)   } />
                     <hl className="Link1">{post.title}</hl>
-                    <img src={urlFor(post.mainImage)
-                      } />
-                    <p>Publisert dato: {post.publishedAt}</p>
+                    <p>Publisert dato: {getFormattedDate(post.publishedAt)}</p>
                   
-                   <p>Post._id:{post._id}</p>
+                   <p>{post.ingress}</p>
                     </div>
                 </Link>
+                </div>
             )) 
             }
          </div>
