@@ -1,5 +1,6 @@
-import { sanityClient, urlFor } from "../sanity"
+import { sanityClient, urlFor } from "../lib/sanity"
 import Link from "next/link"
+
 import {groq} from 'next-sanity'
 import getFormattedDate from "../components/util"
 const Home = ({properties  }) => {
@@ -31,7 +32,7 @@ const Home = ({properties  }) => {
         </div>
       
         )}
-          <Link href="/Pages/about">About</Link>
+        
       </>
     )
 }

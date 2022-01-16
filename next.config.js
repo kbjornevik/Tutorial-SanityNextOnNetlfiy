@@ -1,4 +1,4 @@
-const client = require('./client')
+const client = require('./lib/client')
 //import { sanityClient } from "./sanity.js"
 
 module.exports = {

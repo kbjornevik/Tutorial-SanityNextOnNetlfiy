@@ -6,15 +6,11 @@ import { createImageUrlBuilder,
     createPreviewSubscriptionHook,
     createCurrentUserHook
          } from 'next-sanity'
-import BlockContent from '@sanity/block-content-to-react'
-import Image from "../../components/images"
-import getFormattedDate from "../../components/util"
-import client from '../../client'
-import {PortableText,urlFor,sanityClient } from "../../sanity"
-//import imageUrlBuilder from '@sanity/image-url'
 //import BlockContent from '@sanity/block-content-to-react'
-
-//function urlFor (source) {   return createImageUrlBuilder(client).image(source)}
+//import Image from "../../components/images"
+import getFormattedDate from "../../components/util"
+import client from '../../lib/client'
+import {PortableText,urlFor,sanityClient } from "../../lib/sanity"
 
 const Post = (props) => {
  
@@ -49,12 +45,13 @@ const Post = (props) => {
       </div>
    
 
-      <BlockContent
+      {/*<BlockContent
         blocks={body}s
         imageOptions={{ w: 320, h: 240, fit: 'max' }}
         {...client.config()}
-      />
+      /> */}
       <div>
+        PORTABLE TEXT
       <PortableText blocks={body} />
       </div>
   
