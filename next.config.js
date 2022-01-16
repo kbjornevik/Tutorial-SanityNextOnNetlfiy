@@ -1,10 +1,10 @@
-const client = require('./lib/client')
-//import { sanityClient } from "./sanity.js"
-
+const client = require('./client')
+//import sanityClient from './lib/sanity'
+//import client from "./lib/config"
 module.exports = {
   exportPathMap: async function (defaultPathMap) {
    const paths = await client
-    ///const paths = await sanityClient
+   // const paths = await sanityClient
       .fetch('*[_type == "post" && defined(slug)].slug.current')
       .then(data =>
         data.reduce(

@@ -1,15 +1,6 @@
-//import groq from 'groq'
 import {groq} from 'next-sanity'
-
-import { createImageUrlBuilder,
-    createPortableTextComponent,
-    createPreviewSubscriptionHook,
-    createCurrentUserHook
-         } from 'next-sanity'
-//import BlockContent from '@sanity/block-content-to-react'
-//import Image from "../../components/images"
 import getFormattedDate from "../../components/util"
-import client from '../../lib/client'
+import client from "../../client"
 import {PortableText,urlFor,sanityClient } from "../../lib/sanity"
 
 const Post = (props) => {
