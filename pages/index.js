@@ -1,4 +1,4 @@
-import { sanityClient, urlFor } from "../lib/sanity"
+import { sanityClient, urlFor } from "../libconfig/sanity"
 import Link from "next/link"
 
 import {groq} from 'next-sanity'

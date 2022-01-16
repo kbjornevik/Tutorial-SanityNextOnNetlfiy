@@ -1,4 +1,4 @@
-import { urlFor } from "../lib/sanity"
+import { urlFor } from "../libconfig/sanity"
 
 const Image = ({ identifier, image }) => {
   console.log("Identifier..:",identifier)

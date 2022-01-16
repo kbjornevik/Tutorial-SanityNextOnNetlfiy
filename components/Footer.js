@@ -13,10 +13,10 @@ const Footer = () => {
           height={250}
           alt="Knut"/>
 
-          <p>Knowledge is the driving force that puts creative passion to work.</p>
+          
         <p>I 💖 to make things</p>
         <p>© Knut Bjørnevik    </p>
-        <Link href="/about">About</Link>
+      
       </div>
       </div>
     )

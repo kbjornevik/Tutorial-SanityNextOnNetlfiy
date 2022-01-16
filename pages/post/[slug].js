@@ -1,7 +1,7 @@
 import {groq} from 'next-sanity'
 import getFormattedDate from "../../components/util"
 import client from "../../client"
-import {PortableText,urlFor,sanityClient } from "../../lib/sanity"
+import {PortableText,urlFor,sanityClient } from "../../libconfig/sanity"
 
 const Post = (props) => {
  
