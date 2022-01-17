@@ -2,7 +2,15 @@ import {groq} from 'next-sanity'
 import getFormattedDate from "../../components/util"
 import client from "../../client"
 import {PortableText,urlFor,sanityClient } from "../../libconfig/sanity"
-
+const serializers ={
+  marks:{
+    link: ({children, mark}) => mark.blank ? (
+      <a href={mark.href} target="_blank"  rel="noopner noreferer">
+         {children}
+        </a>
+    ) :(  <a href={mark.href}> {children}</a>)
+  }
+}
 const Post = (props) => {
  
   const {
@@ -42,8 +50,9 @@ const Post = (props) => {
         {...client.config()}
       /> */}
       <div>
-        PORTABLE TEXT
-      <PortableText blocks={body} />
+      <PortableText 
+             blocks={body}
+             serializers={serializers} />
       </div>
   
       </div>

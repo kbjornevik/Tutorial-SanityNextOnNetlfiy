@@ -1,7 +1,8 @@
+import Link from 'next/link'
 const NavBar = () => {
     return ( 
       <div className="nav">
-        <div className="logo">Knut's Tutorial: Sanity Next tekno blog</div>
+        <div className="logo"> <Link href="/">Knut'Toturial</Link> Sanity Next tekno blog</div>
       </div>
     )
   }
